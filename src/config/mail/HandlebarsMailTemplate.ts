@@ -14,3 +14,4 @@ export default class HandlebarsMailTemplate {
     return parseTemplate(variables);
   }
 }
+
