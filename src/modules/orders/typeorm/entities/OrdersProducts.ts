@@ -1,6 +1,15 @@
-import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
-import Order from "./Order";
-import Product from "@modules/products/typeorm/entities/Product";
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn,
+} from 'typeorm';
+
+import Order from './Order';
+import Product from '@modules/products/typeorm/entities/Product';
 
 @Entity('orders_products')
 class OrdersProducts {

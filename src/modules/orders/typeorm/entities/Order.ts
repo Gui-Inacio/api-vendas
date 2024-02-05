@@ -1,14 +1,21 @@
-import { CreateDateColumn, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
-import Customer from "@modules/customers/typeorm/entities/Customer";
-import OrdersProducts from "./OrdersProducts";
+import {
+  CreateDateColumn,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  OneToMany,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn,
+} from 'typeorm';
+
+import Customer from '@modules/customers/typeorm/entities/Customer';
+import OrdersProducts from './OrdersProducts';
 
 @Entity('orders')
 class Order {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  //uma order pode ter um customer - um customer pode ter varias orders
-  //relação muitos pra um onde MUITOS orders pra UM customer
   @ManyToOne(() => Customer)
   @JoinColumn({ name: 'customer_id' })
   customer: Customer;

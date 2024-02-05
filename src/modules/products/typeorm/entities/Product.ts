@@ -1,5 +1,12 @@
-import { Column, CreateDateColumn, Entity, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm'
-import OrdersProducts from '@modules/orders/typeeorm/entities/OrdersProducts';
+import OrdersProducts from '@modules/orders/typeorm/entities/OrdersProducts';
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  OneToMany,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn,
+} from 'typeorm';
 
 @Entity('products')
 class Product {
@@ -26,3 +33,4 @@ class Product {
 }
 
 export default Product;
+
