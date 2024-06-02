@@ -15,7 +15,7 @@ routes.use('/sessions', sessionsRouter);
 routes.use('/password', passwordRouter);
 routes.use('/profile', profileRouter);
 routes.use('/customers', customersRouter);
-routes.use('/orders', ordersRouter)
+routes.use('/orders', ordersRouter);
 
 routes.get('/', (request, response) => {
   return response.json({ message: 'Hello Dev' });
